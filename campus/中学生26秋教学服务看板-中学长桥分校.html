@@ -2636,10 +2636,9 @@ function renderPersonRank() {
     html += '<td class="num">' + rateCell(p.coupon_rate, 'coupon') + '</td>';
     html += '<td class="num">' + (p.coupon_achv ? p.coupon_achv.toFixed(1) + '%' : dashCell()) + '</td>';
     html += '<td class="num">' + fmt(p.renew_count || 0) + '</td>';
+    html += '<td class="num">' + fmt(p.renew_count_renci || 0) + '</td>';
     html += '<td class="num">' + rateCell(p.renew_rate, 'renew') + '</td>';
-    html += '<td class="num">' + dashCell() + '</td>';
-    html += '<td class="num">' + dashCell() + '</td>';
-    html += '<td class="num">' + dashCell() + '</td>';
+    html += '<td class="num">' + rateCell(p.renew_rate_renci, 'renew') + '</td>';
     html += '<td class="num">' + dashCell() + '</td>';
     html += '<td class="num">' + dashCell() + '</td>';
     html += '</tr>';
