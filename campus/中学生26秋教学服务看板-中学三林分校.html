@@ -1856,74 +1856,12 @@ th.num { text-align: right; }
       <span class="title-sub">含区域/校区/班主任/教师及学员续费指标</span>
     </div>
     <div class="rank-tabs">
-      <button class="rank-tab active" data-rtab="region">区域排行</button>
-      <button class="rank-tab" data-rtab="campus">校区排行</button>
-      <button class="rank-tab" data-rtab="person">班主任排行</button>
+      <button class="rank-tab active" data-rtab="person">班主任排行</button>
       <button class="rank-tab" data-rtab="teacher">教师排行</button>
       <button class="rank-tab" data-rtab="students">学员列表</button>
     </div>
     <div class="rank-tab-content">
-      <div class="rank-pane active" id="rtab-region">
-        <div class="rank-table-wrap">
-          <table class="data-table">
-            <thead>
-              <tr>
-                <th style="width:40px;">#</th>
-                <th>区域</th>
-                <th>区域负责人</th>
-                <th class="num" data-sort="campus_count">校区数</th>
-                <th class="num" data-sort="renci">在读人次</th>
-                <th class="num" data-sort="rentou">学员人头</th>
-                <th class="num" data-sort="coupon">购券指标</th>
-                <th class="num" data-sort="coupon_count">购券数</th>
-                <th class="num" data-sort="coupon_rate">购券率</th>
-                <th class="num" data-sort="coupon_achv">购券指标达成率</th>
-                <th class="num" data-sort="renew_count">续费人头</th>
-                <th class="num" data-sort="renew_count_renci">续费人次</th>
-                <th class="num" data-sort="renew_rate">人头续费率</th>
-                <th class="num" data-sort="renew_rate_renci">人次续费率</th>
-                <th class="num" data-sort="total_perf">总业绩</th>
-                <th class="num" data-sort="total_perf_rate">总业绩完成率</th>
-                <th class="num" data-sort="renew_target">续费指标</th>
-                <th class="num" data-sort="renew_perf">续费业绩</th>
-                <th class="num" data-sort="renew_perf_rate">续费完成率</th>
-              </tr>
-            </thead>
-            <tbody id="regionRankBody"></tbody>
-          </table>
-        </div>
-      </div>
-      <div class="rank-pane" id="rtab-campus">
-        <div class="rank-table-wrap">
-          <table class="data-table">
-            <thead>
-              <tr>
-                <th style="width:40px;">#</th>
-                <th>校区</th>
-                <th>所属区域</th>
-                <th>区域负责人</th>
-                <th class="num" data-sort="total_renci">在读人次</th>
-                <th class="num" data-sort="total_rentou">学员人头</th>
-                <th class="num" data-sort="coupon">购券指标</th>
-                <th class="num" data-sort="coupon_count">购券数</th>
-                <th class="num" data-sort="coupon_rate">购券率</th>
-                <th class="num" data-sort="coupon_achv">购券指标达成率</th>
-                <th class="num" data-sort="renew_count">续费人头</th>
-                <th class="num" data-sort="renew_count_renci">续费人次</th>
-                <th class="num" data-sort="renew_rate">人头续费率</th>
-                <th class="num" data-sort="renew_rate_renci">人次续费率</th>
-                <th class="num" data-sort="total_perf">总业绩</th>
-                <th class="num" data-sort="total_perf_rate">总业绩完成率</th>
-                <th class="num" data-sort="renew_target">续费指标</th>
-                <th class="num" data-sort="renew_perf">续费业绩</th>
-                <th class="num" data-sort="renew_perf_rate">续费完成率</th>
-              </tr>
-            </thead>
-            <tbody id="campusRankBody"></tbody>
-          </table>
-        </div>
-      </div>
-      <div class="rank-pane" id="rtab-person">
+<div class="rank-pane" id="rtab-person">
         <div class="rank-filter-bar">
           <div class="filter-item">
             <label>班主任姓名</label>
@@ -2450,8 +2388,6 @@ function initOverview() {
   grid.innerHTML = html;
 
   // 渲染区域/校区/个人排行
-  renderRegionRank();
-  renderCampusRank();
   renderPersonRank();
   renderTeacherRank();
 
@@ -2471,8 +2407,6 @@ function initOverview() {
   });
 
   // 排行榜排序绑定
-  bindSortHeaders('regionRankBody', renderRegionRank);
-  bindSortHeaders('campusRankBody', renderCampusRank);
   bindSortHeaders('personRankBody', renderPersonRank);
   bindSortHeaders('teacherRankBody', renderTeacherRank);
   bindSortHeaders('stuRankBody', renderStudentRank);
