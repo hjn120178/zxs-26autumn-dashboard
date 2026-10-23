@@ -2601,7 +2601,9 @@ function renderCampusRank() {
     html += '<td class="num">' + rateCell(cd.coupon_rate, 'coupon') + '</td>';
     html += '<td class="num">' + (cd.coupon_achv ? cd.coupon_achv.toFixed(1) + '%' : dashCell()) + '</td>';
     html += '<td class="num">' + fmt(cd.renew_count || 0) + '</td>';
+    html += '<td class="num">' + fmt(cd.renew_count_renci || 0) + '</td>';
     html += '<td class="num">' + rateCell(cd.renew_rate, 'renew') + '</td>';
+    html += '<td class="num">' + rateCell(cd.renew_rate_renci, 'renew') + '</td>';
     html += '<td class="num">' + dashCell() + '</td>';
     html += '<td class="num">' + dashCell() + '</td>';
     html += '<td class="num">' + dashCell() + '</td>';
@@ -2639,6 +2641,9 @@ function renderPersonRank() {
     html += '<td class="num">' + fmt(p.renew_count_renci || 0) + '</td>';
     html += '<td class="num">' + rateCell(p.renew_rate, 'renew') + '</td>';
     html += '<td class="num">' + rateCell(p.renew_rate_renci, 'renew') + '</td>';
+    html += '<td class="num">' + dashCell() + '</td>';
+    html += '<td class="num">' + dashCell() + '</td>';
+    html += '<td class="num">' + dashCell() + '</td>';
     html += '<td class="num">' + dashCell() + '</td>';
     html += '<td class="num">' + dashCell() + '</td>';
     html += '</tr>';
